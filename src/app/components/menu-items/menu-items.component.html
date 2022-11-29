@@ -1,0 +1,16 @@
+<div *ngIf="menuItems" class=" p-2 h-100">
+    <div class="input-group">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control" placeholder="Search Dishes">
+    </div>    
+
+    <div class="row mt-2">
+        <div class="card col-md-4 p-2 mx-1 border-radius bg-warning" *ngFor="let menuItem of menuItems">
+            <div class="card-body">
+                {{menuItem.itemName}}
+            </div>
+            <button type="button" id="{{menuItem.id}}" class="btn btn-sm btn-danger" (click)="seleItem($event)">Select</button>
+        </div>   
+    </div>
+</div>
+<router-outlet></router-outlet>

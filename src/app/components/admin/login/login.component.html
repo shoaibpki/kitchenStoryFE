@@ -1,0 +1,24 @@
+<div class="container mt-3 justify-content-center">
+    <h2>Admin Login form</h2>
+    <form #adminLogin="ngForm" (ngSubmit)="getUser(adminLogin)">
+        <div class="row">
+            <div class="col col-md-5">
+                <div class="form-group">
+                    <label for="username">User Name:</label>
+                    <input type="text" name="username" class="form-control" ngModel>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-5">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" ngModel>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary mt-3" type="submit">
+            Login
+        </button>
+    </form>
+</div>
